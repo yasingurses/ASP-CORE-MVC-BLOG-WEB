@@ -1,7 +1,7 @@
 # ASP-CORE-MVC-BLOG-WEB
-#Blog Ekleme
+# Blog Ekleme
 ![BlogAdd](https://user-images.githubusercontent.com/66069141/202373981-5d4fc00e-badf-4cc2-9fb4-c5729c9991e6.png)
-#Blog Home Page
+# Blog Home Page
 ![BlogDataBase](https://user-images.githubusercontent.com/66069141/202373989-a3f17c55-3b02-496a-b9f7-68b8d7d6fcd0.png)
 #Blog List 
 ![BlogList](https://user-images.githubusercontent.com/66069141/202373993-ae03f4df-e75f-40bd-9589-b3c8e58f03fb.png)
