@@ -1,0 +1,35 @@
+﻿@model EntityLayer.Concrete.Blog;
+@{
+    ViewData["Title"] = "Guncelle";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<h1>BLOG GÜNCELLE</h1>
+<form asp-action="Guncelle" asp-controller="Blog" method="post">
+    <div style="display:none" class="mb-3">
+        <label class="form-label">BLOG ID </label>
+        <input readonly type="text" class="form-control" asp-for="blog_ID">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">BLOG ADI</label>
+        <input type="text" class="form-control" asp-for="blog_Name">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">BLOG İÇERİĞİ</label>
+        <input type="text" class="form-control" asp-for="blog_Content">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">BLOG BAŞLIĞI</label>
+        <input type="text" class="form-control" asp-for="blog_Title">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">BLOG RESMİ</label>
+        <input type="text" class="form-control" asp-for="blog_image">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">BLOG YAZILIŞ TARİHİ</label>
+        <input type="text" class="form-control" asp-for="blog_Date">
+    </div>
+    <button type="submit" class="btn btn-primary">KAYIT GÜNCELLE </button>
+</form>
+

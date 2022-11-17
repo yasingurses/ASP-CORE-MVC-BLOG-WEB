@@ -1,0 +1,62 @@
+﻿@using EntityLayer.Concrete
+@model List<Team>
+@{
+    ViewData["Title"] = "List";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<h1>TAKIM LİSTESİ</h1>
+<div><a asp-action="Ekle" asp-controller="Admin" class="btn btn-primary">Kişi Ekle</a></div>
+<section class="section">
+    <div class="row">
+        <div class="col-lg-12">
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Default Table</h5>
+
+                    <!-- Default Table -->
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Takım Arkadaşı ID</th>
+                                <th scope="col">Takım Arkadaşı Adı</th>
+                                <th scope="col">Takım Arkadaşı Soyadı </th>
+                                <th scope="col">Takım Arkadaşı Departmanı </th>
+                                <th scope="col">Takım Arkadaşı Maaşı </th>
+                                <th scope="col">Takım Arkadaşı İşlemler </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var a in Model)
+                            {
+                                <tr>
+                                    <td>@a.teammate_ID</td>
+                                    <td>@a.teammate_Name</td>
+                                    <td>@a.teammate_Surname</td>
+                                    <td>@a.teammate_Department</td>
+                                    <td>@a.teammate_Salary</td>
+
+                                    <td>
+                                        <a onclick="return confirm('Silmek istediğinize eminmisiniz?');" asp-controller="Admin" asp-action="Sil" asp-route-id="@a.teammate_ID" class="btn btn-danger">sil</a>
+
+                                        <a asp-controller="Admin" asp-action="Guncelle" asp-route-id="@a.teammate_ID" class="btn btn-warning">Güncelle</a>
+                                    </td>
+                                    <td>
+                                    </td>
+
+
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                    <!-- End Default Table Example -->
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+

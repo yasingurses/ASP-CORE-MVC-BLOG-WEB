@@ -1,0 +1,39 @@
+﻿@using EntityLayer.Concrete;
+@model List<Team>
+
+
+    <div class="container">
+        <div class="row justify-content-center">
+        <h2>SİTEMİZDEKİ BLOG YAZARLARININ KAYITLARI</h2>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Yazarın Kodu</th>
+                        <th>Yazarın İsmi</th>
+                        <th>Yazarın Soyismi</th>
+                        <th>Yazarın Alanı</th>
+                        <th>Yazarın Maaşı</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <th scope="row">@item.teammate_ID</th>
+                            <td>@item.teammate_Name</td>
+                            <td>@item.teammate_Surname</td>
+                            <td>@item.teammate_Department</td>
+                            <td>@item.teammate_Salary</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+           
+        </div>
+        </div>
+    </div>
+
+<div class="btn-group-vertical">
+    ...
+</div>

@@ -1,0 +1,33 @@
+﻿@model EntityLayer.Concrete.Blog;
+@{
+    ViewData["Title"] = "Ekle";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<h1>Yeni Blog Ekle</h1>
+<form asp-action="Ekle" asp-controller="Blog" method="post">
+    <div class="mb-3">
+        <label class="form-label">BLOG ADI</label>
+        <input asp-for="blog_Name" type="text" class="form-control">
+
+    </div>
+    <div class="mb-3">
+        <label class="form-label">BLOG İÇERİĞİ</label>
+        <input type="text" class="form-control" asp-for="blog_Content">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">BLOG BAŞLIĞI</label>
+        <input type="text" class="form-control" asp-for="blog_Title">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">BLOG TARİHİ</label>
+        <input type="text" class="form-control" asp-for="blog_Date">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">BLOG RESMİ(URL)</label>
+        <input type="text" class="form-control" asp-for="blog_image">
+    </div>
+
+    <button type="submit" class="btn btn-primary">KAYIT EKLE</button>
+</form>
+

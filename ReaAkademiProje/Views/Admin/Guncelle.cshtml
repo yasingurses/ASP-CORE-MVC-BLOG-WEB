@@ -1,0 +1,31 @@
+﻿@model EntityLayer.Concrete.Team;
+@{
+    ViewData["Title"] = "Guncelle";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<h1>TAKIM ARKADAŞI GÜNCELLE</h1>
+<form asp-action="Guncelle" asp-controller="Admin" method="post">
+    <div style="display:none" class="mb-3">
+        <label class="form-label">TAKIM ARKADAŞI ID </label>
+        <input readonly type="text" class="form-control" asp-for="teammate_ID">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">TAKIM ARKADAŞI ADI</label>
+        <input type="text" class="form-control" asp-for="teammate_Name">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">TAKIM ARKADAŞI SOYADI</label>
+        <input type="text" class="form-control" asp-for="teammate_Surname">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">TAKIM ARKADAŞI DEPARTMANI</label>
+        <input type="text" class="form-control" asp-for="teammate_Department">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">TAKIM ARKADAŞI MAAŞI</label>
+        <input type="text" class="form-control" asp-for="teammate_Salary">
+    </div>
+    <button type="submit" class="btn btn-primary">KAYIT GÜNCELLE </button>
+</form>
+

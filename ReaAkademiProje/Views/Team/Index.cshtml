@@ -1,0 +1,30 @@
+﻿@using EntityLayer.Concrete;
+@model List<Team>;
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Team ID</th>
+            <th scope="col">Team Name</th>
+            <th scope="col">Team Surname</th>
+            <th scope="col">Team Department</th>
+            <th scope="col">Team Salary</th>
+            <th scope="col">Team Password</th>
+            <th scope="col">Team Role</th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tbody>
+            <tr>
+                <td>@item.teammate_ID</td>
+                <td>@item.teammate_Name</td>
+                <td>@item.teammate_Surname</td>
+                <td>@item.teammate_Department</td>
+                <td>@item.teammate_Salary</td>
+                <td>@item.teammate_Password</td>
+                <td>@item.teammate_Role</td>
+            </tr>
+        </tbody>
+    }
+</table>
